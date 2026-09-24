@@ -1,0 +1,26 @@
+START
+totalStudentsServed = number of students
+totalServiceTime = 0
+highest = first student's service time
+lowest = first student's service time
+longerThan10 = 0
+FOR i=0;i<5;i++
+totalServiceTime = totalServiceTime + students[i].serviceTime 
+IF students[i].serviceTime > highest THEN
+highest ← students[i].serviceTime
+END IF
+IF students[i].serviceTime < lowest THEN
+lowest ← students[i].serviceTime
+END IF
+IF students[i].serviceTime > 10 THEN  
+longerThan10 ← longerThan10 + 1
+END IF
+END FOR
+average ← totalServiceTime / totalStudentsServed
+OUTPUT "Total students served:", totalStudentsServed
+OUTPUT "Total service time:", totalServiceTime
+OUTPUT "Average service time:", average
+OUTPUT "Highest service time:", highest
+OUTPUT "Lowest service time:", lowest
+OUTPUT "Services longer than 10 minutes:", longerThan10
+END
